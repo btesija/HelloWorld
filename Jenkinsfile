@@ -10,6 +10,7 @@ pipeline {
     stage('Two') {
       steps {
         echo 'HI, starting step 1 from stage Two ! '
+        sh './client_folder/build_client.sh'
       }
     }
     stage('Three') {
