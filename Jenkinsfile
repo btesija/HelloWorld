@@ -29,6 +29,13 @@ pipeline {
         echo 'HI, starting step 1 from stage Three ! '
       }
     }
+    stage('Send mail ...'){
+      mail bcc: '', body: '''Hi welcome to Jenkins mail alert 
+
+      thx
+      Jenkins TB ''', cc: '', from: '', replyTo: '', subject: 'Jenkins job', to: 'btesija@gmail.com'
+    }
+
   
   }
 }
