@@ -30,10 +30,12 @@ pipeline {
       }
     }
     stage('Send mail ...'){
-      mail bcc: '', body: '''Hi welcome to Jenkins mail alert 
+      steps {
+        mail bcc: '', body: '''Hi welcome to Jenkins mail alert 
 
-      thx
-      Jenkins TB ''', cc: '', from: '', replyTo: '', subject: 'Jenkins job', to: 'btesija@gmail.com'
+        thx
+        Jenkins TB ''', cc: '', from: '', replyTo: '', subject: 'Jenkins job', to: 'btesija@gmail.com'
+      }
     }
 
   
